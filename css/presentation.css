@@ -1,1 +1,46 @@
-<html><body>You are being <a href="https://raw.github.com/sc68cal/openstack-theory-and-practice-presentation/master/css/presentation.css">redirected</a>.</body></html>
+.step {
+	position: absolute;
+	width: 1000px;
+	padding: 40px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	-ms-box-sizing:     border-box;
+	-o-box-sizing:      border-box;
+	box-sizing:         border-box;
+
+	font-family: 'PT Serif', georgia, serif;
+	font-size: 38px;
+	line-height: 1.5;
+}
+
+body{
+	background: black;
+	color: white;
+	min-height: 740px;
+}
+
+img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h2{
+	text-align: center;
+}
+
+a:link{
+	color: white;
+}
+a:visited{
+	color: white;
+}
+
+pre{
+	font-size:24px;
+}
