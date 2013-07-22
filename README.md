@@ -7,3 +7,6 @@ The talk will also discuss the differences between a traditional
 virtual private server environment, and how the cloud model provides more
 control and flexibility, as well as techniques that reduce the 
 amount of "hands-on" time required to run day to day operations.
+
+
+[horizon]: https://github.com/openstack/horizon
