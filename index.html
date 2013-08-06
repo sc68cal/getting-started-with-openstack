@@ -31,7 +31,6 @@
 				<li>Storage
 					<ul>
 						<li> Ephemeral Storage </li>
-						<li> Block Storage </li>
 					</ul>
 				</li>
 				<li>Networking
@@ -81,27 +80,10 @@
 			<ul>
 				<li> Ephemeral
 					<ul>
-						<li> Stored on the hypervisor the instance is running on
-							<ul>
-								<li>Fastest type of storage in the cloud </li>
-							</ul>
-						</li>
+						<li> Stored on the hypervisor the instance is running on </li>
 						<li> Looks like a regular block device </li>
 						<li> Most images configured for cloud environments mount it on /mnt </li>
 						<li> When an instance is terminated, this storage is deleted - immediately </li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-		<div id="storage-block" class="step slide" data-x="10000" data-y="-1500">
-			<h2> Storage </h2>
-			<ul>
-				<li> Block Storage
-					<ul>
-						<li> Cinder - OpenStack block storage service </li>
-						<li> Provides persistent block storage that can be attached to an instance </li>
-						<li> Can also be used as the boot volume for instances </li>
-						<li> Depending on back-end for Cinder, can be slower than ephemeral storage </li>
 					</ul>
 				</li>
 			</ul>
