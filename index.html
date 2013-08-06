@@ -104,6 +104,27 @@
 				</li>
 			</ul>
 		</div>
+		<div id="networking-fixed" class="step slide" data-x="12000" data-y="-1500">
+			<h2> Networking - Fixed IPs </h2>
+			<p> More in depth presentation - <a href="http://www.coreitpro.com/presentations/openstack-theory-and-practice/"> OpenStack: Theory and Practice</a></p>
+			<ul>
+				<li> Images use DHCP to receive a fixed IP - in RFC1918 space </li>
+				<li> The RFC1918 space is only routed inside of the OpenStack cloud </li>
+				<li> NAT provided by hypervisor for outside communication </li>
+				<li> Instance - to - Instance communication should use the fixed IP address </li>
+			</ul>
+		</div>
+		<div id="networking-float" class="step slide" data-x="14000" data-y="-1500">
+			<h2> Networking - Floating IPs </h2>
+			<ul>
+				<li> Routable IPs are exposed via "Floating IP" API </li>
+				<li> Floating IPs allocated from a shared pool </li>
+				<li> Floating IPs are NAT'd to the fixed IP of the instance </li>
+				<li> No new interfaces, DHCP offer </li>
+				<li> Instance must use OpenStack API for discovery, if they need to know the floating IP </li>
+				<li> Floating IPs can be re-assigned to instances on the fly - allowing fast fail-over and more flexibility </li>
+			</ul>
+		</div>
 	</div>
 	<script src="impress.js/js/impress.js"> </script>
 	<script>impress().init();</script>
