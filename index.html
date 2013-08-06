@@ -24,6 +24,85 @@
 			<h2> OpenStack End User Guide </h2>
 			<h2><a href="http://docs.openstack.org/user-guide/content/">http://docs.openstack.org/user-guide/</a></h2>
 		</div>
+		<div id="concepts" class="step slide" data-x="0" data-y="-1500">
+			<h2> Basic Cloud Concepts </h2>
+			<ul>
+				<li>Instance Flavors </li>
+				<li>Storage
+					<ul>
+						<li> Ephemeral Storage </li>
+						<li> Block Storage </li>
+					</ul>
+				</li>
+				<li>Networking
+					<ul>
+						<li> Fixed IP </li>
+						<li> Floating IP </li>
+					</ul>
+				</li>
+		</div>
+		<div id="terminology" class="step slide" data-x="2000" data-y="-1500">
+			<h2> Common Terminology </h2>
+			<ul>
+				<li> Image </li>
+				<li> Instance </li>
+				<li> Flavor </li>
+				<li> Snapshot </li>
+				<li> Instance Termination </li>
+			</ul>
+		</div>
+		<div id="flavors" class="step slide" data-x="4000" data-y="-1500">
+			<h2> Flavors </h2>
+				Flavors have:
+				<ul>
+					<li> # CPUs </li>
+					<li> Amount of Memory </li>
+					<li> Ephemeral Storage Size </li>
+				</ul>
+		</div>
+		<div id="image" class="step slide" data-x="6000" data-y="-1500">
+			<h2> Images </h2>
+			<ul>
+				<li> System image that an instance can boot from </li>
+				<li> Consists of:
+					<ul>
+						<li> Kernel </li>
+						<li> Root filesystem </li>
+					</ul>
+				</li>
+				<li> If you decide to author your own images - make sure to allocate free space for /tmp </li>
+				<li> Or create an fstab on the image that uses tmpfs for /tmp </li>
+			</ul>
+		</div>
+		<div id="storage-ephemeral" class="step slide" data-x="8000" data-y="-1500">
+			<h2> Storage </h2>
+			<ul>
+				<li> Ephemeral
+					<ul>
+						<li> Stored on the hypervisor the instance is running on
+							<ul>
+								<li>Fastest type of storage in the cloud </li>
+							</ul>
+						</li>
+						<li> Looks like a regular block device </li>
+						<li> Most images configured for cloud environments mount it on /mnt </li>
+						<li> When an instance is terminated, this storage is deleted - immediately </li>
+				</li>
+			</ul>
+		</div>
+		<div id="storage-block" class="step slide" data-x="10000" data-y="-1500">
+			<h2> Storage </h2>
+			<ul>
+				<li> Block Storage
+					<ul>
+						<li> Cinder - OpenStack block storage service </li>
+						<li> Provides persistent block storage that can be attached to an instance </li>
+						<li> Can also be used as the boot volume for instances </li>
+						<li> Depending on back-end for Cinder, can be slower than ephemeral storage </li>
+					</ul>
+				</li>
+			</ul>
+		</div>
 	</div>
 	<script src="impress.js/js/impress.js"> </script>
 	<script>impress().init();</script>
