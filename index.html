@@ -117,6 +117,41 @@
 				<li><a href='https://help.ubuntu.com/community/CloudInit'>Cloud-Init</a></li>
 			</ul>
 		</div>
+		<div id="metadata-openstack" class="step slide" data-x="12000" data-y="0">
+			<h2> OpenStack Metadata API </h2>
+			<pre>
+$ curl http://169.254.169.254/openstack/2012-08-10/meta_data.json
+{
+    "availability_zone": "nova",
+    "hostname": "test.novalocal",
+    "launch_index": 0,
+    "meta": {
+        "priority": "low",
+        "role": "webserver"
+    },
+    "name": "test",
+    "public_keys": {
+        "mykey": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAA...."
+    },
+    "uuid": "d8e02d56-2648-49a3-bf97-6be8f1204f38"
+}
+			</pre>
+		</div>
+		<div id="metadata-userdata" class="step slide" data-x="10000" data-y="0">
+			<h2> User Data </h2>
+			<ul>
+				<li> When launching an instance, you can populate your API request for an instance with user data </li>
+				<li> Free form field - multitude of uses </li>
+				<li> Can provide an entire script to be executed by the VM when booted </li>
+				<li> Provide just variables, to a script that is baked into the image </li>
+				<li> Limitless potential </li>
+			</ul>
+			<pre>
+$ curl http://169.254.169.254/openstack/2012-08-10/user_data
+#!/bin/bash
+echo 'Extra user data here'
+			</pre>
+		</div>
 	</div>
 	<script src="impress.js/js/impress.js"> </script>
 	<script>impress().init();</script>
