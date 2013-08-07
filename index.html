@@ -152,6 +152,29 @@ $ curl http://169.254.169.254/openstack/2012-08-10/user_data
 echo 'Extra user data here'
 			</pre>
 		</div>
+		<div id="metadata-cloudinit" class="step slide" data-x="8000" data-y="0">
+			<h2> cloud-init </h2>
+			<ul>
+				<li> Package maintained by Canonical/Ubunu </li>
+				<li> Can be installed on other Linux distributions </li>
+				<li> Consumes the Metadata API, and sets up the instance with data retrieved from the API </li>
+				<li> Can handle gzipped data in the user fields, URLs in the user data field will be fetched and executed as scripts, etc... </li>
+			</ul>
+		</div>
+		<div id="metadata-cloudinit-cloudconfig" class="step slide" data-x="6000" data-y="0">
+			<h2> Cloud Init - Cloud Config </h2>
+			<ul>
+				<li> Also supports a special syntax - "Cloud Config"
+					<ul>
+						<li> YAML file </li>
+						<li> Specify apt packages that should be installed on boot </li>
+						<li> Add additional apt sources </li>
+						<li> Import more SSH keys </li>
+					</ul>
+				</li>
+				<li>https://help.ubuntu.com/community/CloudInit</li>
+			</ul>
+		</div>
 	</div>
 	<script src="impress.js/js/impress.js"> </script>
 	<script>impress().init();</script>
