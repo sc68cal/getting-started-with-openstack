@@ -203,6 +203,25 @@ echo 'Extra user data here'
 				<li> Destination Port </li>
 			</ul>
 		</div>
+		<div id="cli-setup" class="step slide" data-x="2000" data-y="2000">
+			<h2> CLI Install </h2>
+			<ul>
+				<li> easy_install pip </li>
+				<li> pip install python-novaclient </li>
+			</uL>
+			<p> More detailed instructions available at <a href="http://docs.openstack.org/user-guide/content/install_clients.html">http://docs.openstack.org/user-guide/content/install_clients.html</a></p>
+		</div>
+		<div id="cli-config" class="step slide" data-x="4000" data-y="2000">
+			<h2> Configuration </h2>
+			<ul>
+				<li> Four environment variables </li>
+				<li> OS_TENANT_NAME</li>
+				<li> OS_USERNAME </li>
+				<li> OS_PASSWORD </li>
+				<li> OS_AUTH_URL </li>
+			</ul>
+			<p> You can download an rc file from Horizon that has everything set - just source it in your shell </p>
+		</div>
 	</div>
 	<script src="impress.js/js/impress.js"> </script>
 	<script>impress().init();</script>
