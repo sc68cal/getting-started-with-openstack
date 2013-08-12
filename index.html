@@ -175,6 +175,34 @@ echo 'Extra user data here'
 				<li>https://help.ubuntu.com/community/CloudInit</li>
 			</ul>
 		</div>
+		<div id="access" class="step slide" data-x="4000" data-y="0">
+			<h2> Accessing your VMs </h2>
+			<ul>
+				<li> SSH keys </li>
+				<li> Security Group API </li>
+			</ul>
+		</div>
+		<div id="access-ssh" class="step slide" data-x="2000" data-y="0">
+			<h2> SSH Keys </h2>
+			<ul>
+				<li> SSH public key is included in the Metadata returned back to the instance </li>
+				<li> Cloud-Init and other init scripts create an authorized_keys with the public key </li>
+				<li> This will override any contents of authorized_keys that was baked into the image </li>
+				<li> If you need more than one public key, check the documentation for Cloud-Init </li>
+			</ul>
+		</div>
+		<div id="access-security-group" class="step slide" data-x="0" data-y="0">
+			<h2> Security Group API </h2>
+			<ul>
+				<li> By default, all traffic to the VM is dropped </li>
+				<li> Create a Security Group, which consists of rules </li>
+				<li> Protocol </li>
+				<li> Source IP </li>
+				<li> Source port </li>
+				<li> Destination IP </li>
+				<li> Destination Port </li>
+			</ul>
+		</div>
 	</div>
 	<script src="impress.js/js/impress.js"> </script>
 	<script>impress().init();</script>
